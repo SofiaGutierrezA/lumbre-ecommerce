@@ -1,0 +1,43 @@
+<?php
+return [
+    [
+        'id' => '0',
+        'name' => 'Vela Bruma',
+        'category' => 'Vela aromática · 220 g',
+        'price' => 28,
+        'image' => 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=900&q=85',
+        'alt' => 'Vela encendida en un interior cálido',
+        'badge' => 'Favorito',
+        'tone' => 'sand',
+    ],
+    [
+        'id' => '1',
+        'name' => 'Jarrón Alba',
+        'category' => 'Cerámica hecha a mano',
+        'price' => 42,
+        'image' => 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=900&q=85',
+        'alt' => 'Jarrón de cerámica artesanal',
+        'badge' => '',
+        'tone' => 'clay',
+    ],
+    [
+        'id' => '2',
+        'name' => 'Difusor Calma',
+        'category' => 'Mikado · 100 ml',
+        'price' => 34,
+        'image' => 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=85',
+        'alt' => 'Frasco de perfume y cuidado personal',
+        'badge' => 'Nuevo',
+        'tone' => 'olive',
+    ],
+    [
+        'id' => '3',
+        'name' => 'Cuenco Tierra',
+        'category' => 'Cerámica hecha a mano',
+        'price' => 36,
+        'image' => 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=85',
+        'alt' => 'Pieza de cerámica artesanal en tonos naturales',
+        'badge' => '',
+        'tone' => 'rose',
+    ],
+];

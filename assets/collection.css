@@ -1,0 +1,100 @@
+.collection-main {
+  padding: 80px 8.3% 86px;
+}
+.collection-intro {
+  text-align: center;
+  padding-bottom: 36px;
+}
+.collection-intro .eyebrow {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.collection-intro h1 {
+  font-size: clamp(47px, 5vw, 68px);
+  line-height: 1.1;
+}
+.collection-intro h1 em {
+  color: var(--olive);
+  font-weight: 500;
+}
+.collection-description {
+  max-width: 410px;
+  margin: 17px auto 31px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.collection-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 15px 0 13px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.collection-rule span:first-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+.collection-grid {
+  row-gap: 18px;
+}
+.collection-grid .product-card h2 {
+  font: 500 15px var(--serif);
+  letter-spacing: 0;
+  margin: 0 0 5px;
+}
+.collection-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 59px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+  font: 14px var(--serif);
+  color: var(--muted);
+}
+.collection-note span {
+  font-size: 19px;
+  color: var(--olive);
+}
+.collection-page .site-header .bag-button {
+  color: var(--ink);
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .collection-main {
+    padding: 68px 5% 72px;
+  }
+}
+@media (max-width: 620px) {
+  .collection-main {
+    padding: 52px 6% 63px;
+  }
+  .collection-intro {
+    padding-bottom: 25px;
+  }
+  .collection-intro h1 {
+    font-size: 43px;
+  }
+  .collection-description {
+    font-size: 11px;
+    margin: 14px auto 24px;
+  }
+  .collection-rule {
+    font-size: 9px;
+  }
+  .collection-grid {
+    gap: 8px 11px;
+  }
+  .collection-grid .product-meta h2 {
+    font-size: 13px;
+  }
+  .collection-note {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 42px;
+  }
+}
