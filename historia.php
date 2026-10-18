@@ -1,6 +1,5 @@
 <?php
-$products = require __DIR__ . '/data/products.php';
-$clientProducts = array_map(static fn($product) => array_intersect_key($product, array_flip(['id', 'name', 'category', 'price', 'image'])), $products);
+require_once __DIR__ . '/includes/store.php';
 ?>
 <!doctype html>
 <html lang="es">
@@ -14,25 +13,22 @@ $clientProducts = array_map(static fn($product) => array_intersect_key($product,
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/story.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>window.LUMBRE_PRODUCTS = <?= json_encode($clientProducts, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT) ?>;</script>
-    <script defer src="assets/app.js"></script>
 </head>
 <body class="story-page">
     <div class="announcement">Envío gratis a partir de 60 € <span>·</span> Hecho despacio, para durar</div>
     <header class="site-header">
-        <button class="icon-button menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+        <details class="mobile-nav">
+            <summary class="menu-toggle" aria-label="Abrir menú"><span></span><span></span></summary>
+            <div class="mobile-menu"><a href="coleccion.php">Tienda</a><a href="historia.php">Nuestra historia</a></div>
+        </details>
         <nav class="nav nav-left" aria-label="Navegación principal">
             <a href="coleccion.php">Tienda</a>
             <a href="historia.php" aria-current="page">Nuestra historia</a>
         </nav>
         <a class="wordmark" href="index.php" aria-label="Lumbre, inicio">lumbre<span>.</span></a>
         <nav class="nav nav-right" aria-label="Acciones">
-            <a class="bag-button" href="bolsa.php" aria-label="Ir a la bolsa">Bolsa <span class="bag-count">0</span></a>
+            <a class="bag-button" href="bolsa.php" aria-label="Ir a la bolsa">Bolsa <span class="bag-count"><?= lumbre_bag_count() ?></span></a>
         </nav>
-        <div class="mobile-menu">
-            <a href="coleccion.php">Tienda</a><a href="historia.php">Nuestra historia</a>
-        </div>
     </header>
     <main>
         <section class="story-hero">
@@ -67,8 +63,7 @@ $clientProducts = array_map(static fn($product) => array_intersect_key($product,
             </div>
         </section>
         <section class="story-ending">
-            <span class="ending-star">✳</span>
-            <p class="eyebrow">Bienvenida a casa</p>
+            <span class="ending-star">✳</span><p class="eyebrow">Bienvenida a casa</p>
             <h2>Que lo que te rodea<br>te recuerde <em>cómo quieres sentirte.</em></h2>
             <a class="button button-dark" href="coleccion.php">Explorar la colección <span>↗</span></a>
         </section>

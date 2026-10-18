@@ -854,3 +854,7 @@ h2 em {
     font-size: 8px;
   }
 }
+
+.mobile-nav{display:none}.mobile-nav summary{list-style:none}.mobile-nav summary::-webkit-details-marker{display:none}.form-notice{margin:0 0 20px;padding:12px 15px;background:#e9e8df;color:var(--olive);font-size:11px}.search-summary{color:var(--muted);font-size:11px;margin:0 0 15px}.add-form{margin:0}.quick-add{color:var(--ink)}
+@media(max-width:620px){.mobile-nav{display:block;position:relative;z-index:7}.mobile-nav[open] .mobile-menu{max-height:180px;padding:14px 7% 20px;border-bottom-width:1px}.mobile-menu a{font-size:13px;text-align:left}}
+@media(max-width:620px){.mobile-nav{position:static}}
